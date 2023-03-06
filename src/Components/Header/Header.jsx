@@ -11,6 +11,8 @@ const Header = () => {
     <div className='border border-dark header' >
       <FaBars 
       className='header__menu' size={26}
+
+
       />
       <img
       src="https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_1280.png"
@@ -28,6 +30,8 @@ const Header = () => {
 
       <div className='header__icons'>
         <MdNotifications  size={28} />
+
+        
         <MdApps  size={28}/>
         <img src="https://www.shutterstock.com/image-vector/business-man-icon-600w-249914287.jpg" alt="avatar" />
       </div>
