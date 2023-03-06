@@ -2,10 +2,10 @@ import React from 'react'
 import "./_sidebar.scss";
 
 import { MdSubscriptions, MdExitToApp, MdThumbUp, MdHistory, MdLibraryBooks, MdHome, MdSentimentSatisfied, MdSentimentDissatisfied } from 'react-icons/md';
-const Sidebar = ({sidebar}) => {
+const Sidebar = ({sidebar,handleSidebar}) => {
   return (
-    // conditional class to handle toggle of menu
-    <nav className={sidebar ? "sidebar open": "sidebar close"} >  
+    // conditional class to handle toggle of menu  && event to toggle side or clicking each li
+    <nav className={sidebar ? "sidebar open": "sidebar close"}  onClick={()=>handleSidebar(false)} >  
         <li>
           <MdHome size={23} />
           <span>Home</span>

@@ -9,6 +9,7 @@
     width: 250px;
     height: 90vh;
     padding-top: 2rem;
+    transition: transform 0.2s ease-in;  //transition effect on sidebar
 
     li{
         display:flex;
@@ -35,7 +36,8 @@
     //     background-color: $border-color;
     // }
     &.open{  // to display as per toggle
-        display: block;
+        // display: block;
+        transform: translate(0);
     }
 }
 
@@ -53,6 +55,9 @@
 
 @media(max-width:$breakpoint-small){
     .sidebar{
-        display: none;
+        // display: none;
+        transform: translate(-100%);
+        position: fixed;  // to occupy empty sidebar space
+        z-index: 999;
     }
 }
