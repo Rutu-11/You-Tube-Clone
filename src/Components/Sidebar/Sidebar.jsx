@@ -2,9 +2,10 @@ import React from 'react'
 import "./_sidebar.scss";
 
 import { MdSubscriptions, MdExitToApp, MdThumbUp, MdHistory, MdLibraryBooks, MdHome, MdSentimentSatisfied, MdSentimentDissatisfied } from 'react-icons/md';
-const Sidebar = () => {
+const Sidebar = ({sidebar}) => {
   return (
-    <nav className='border border-danger sidebar' >
+    // conditional class to handle toggle of menu
+    <nav className={sidebar ? "sidebar open": "sidebar close"} >  
         <li>
           <MdHome size={23} />
           <span>Home</span>

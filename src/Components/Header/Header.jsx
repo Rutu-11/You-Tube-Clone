@@ -6,12 +6,12 @@ import {FaBars} from "react-icons/fa";
 import { AiOutlineSearch } from 'react-icons/ai';
 import {AdNotifications, MdApps, MdNotifications} from 'react-icons/md'
 
-const Header = () => {
+const Header = ({handleSidebar}) => {
   return (
     <div className='border border-dark header' >
       <FaBars 
       className='header__menu' size={26}
-
+      onClick={()=>handleSidebar()}
 
       />
       <img

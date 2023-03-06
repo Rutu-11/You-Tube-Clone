@@ -34,6 +34,9 @@
     // hr{
     //     background-color: $border-color;
     // }
+    &.open{  // to display as per toggle
+        display: block;
+    }
 }
 
 @media(max-width:$breakpoint-medium){
