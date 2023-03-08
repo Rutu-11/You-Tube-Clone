@@ -7,8 +7,9 @@ import { useState } from "react";
 import LoginScreen from "./Screens/LoginScreen/LoginScreen";
 
 import { Routes, Route, Switch } from "react-router-dom";
+import HomeRoutes from "./Components/AllRoutes/AllRoutes";
 
-const Layout = ({ children }) => {
+export const Layout = ({children}) => {
   const [sidebar, setSidebar] = useState(false);
 
   const handleSidebar = () => {
@@ -32,27 +33,10 @@ const Layout = ({ children }) => {
 
 const App = () => {
   return (
-    <>
-      // <h1>HIIIIIII</h1>
-      {/* <Switch> */}
-      {/* <Layout> */}
-      {/* <Routes>*/
-        <Route path="/" > 
-          <HomeScreen />
-         </Route> 
-
-     /* {/* // </Routes> */}
-      {/* </Layout> */}
-      {/* <Route path="/auth" exact>
-          <LoginScreen />
-        </Route> */}
-      {/* <Route path="/search">
-        <Layout>
-          <h1>Search Me</h1>
-        </Layout>
-      </Route> */}
-      {/* </Switch> */}
-    </>
+   <>
+   
+     <HomeRoutes/>
+   </>
   );
 };
 
