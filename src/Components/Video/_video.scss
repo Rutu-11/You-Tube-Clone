@@ -28,7 +28,11 @@
     &__title{
         margin-bottom: 0.1rem;
         color: #fff;
-
+        @include title-overflow(1);  //import @mixin defined in base.scss
+        // overflow: hidden;
+        // display: -webkit-box;  //code to hide overflow of title
+        // -webkit-line-clamp: 1;
+        // -webkit-box-orient: vertical;
     }
 
     &__details{

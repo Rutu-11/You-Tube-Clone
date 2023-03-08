@@ -9,7 +9,7 @@ const Video = () => {
         <span>09:80</span>
       </div>
       <div className="video__title">
-        Youtube-Clone #MyUTubeClone
+        Its a dummy Youtube-Clone #MyYouTubeClone
       </div>
       <div className="video__details">
         <span>
