@@ -4,33 +4,34 @@ import { AiFillEye } from "react-icons/ai";
 import request from "../../API";
 
 const Video = (video) => {
-  const {
-    id,
-    snippet: {
-      channelId,
-      channelTitle,
-      title,
-      publishedAt,
-      thumbnails: { medium },
-    },
-  } = video;
+  // const {
+  //   id,
+  //   snippet: {
+  //     channelId,
+  //     channelTitle,
+  //     title,
+  //     publishedAt,
+  //     thumbnails: { medium },
+  //   },
+  // } = video;
+  // console.log(video)
 
   useEffect(()=>{
     const get_video_details = async()=>{
      const{data:{items}} =  await request('/videos',{
       params:{
         part: "contentDetails, statisctics",
-        id:id,
+        // id:id,
       }
      })
-     console.log(items)
+    //  console.log(items)
     }
     get_video_details();
-  },[id])
+  },[])
   return (
     <div className="video">
       <div className="video__top">
-        <img src={medium.url} alt="" />
+        <img src="" alt="" />
         <span>09:80</span>
       </div>
       <div className="video__title">
