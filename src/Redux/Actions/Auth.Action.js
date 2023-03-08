@@ -14,6 +14,8 @@ export const login = () => async (dispatch) => {
       type: LOGIN_REQUEST,
     });
     const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope("https://www.googleapis.com/auth/youtube.force-ssl") // received from you-tube-API --> guide -->installed APP --> 3rd url
+
     const res = await auth.signInWithPopup(provider);
     console.log(res);
 
