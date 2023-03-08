@@ -3,11 +3,12 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import { Container } from "react-bootstrap";
 import HomeScreen from "./Screens/HomeScreen/HomeScreen";
 import "./_app.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LoginScreen from "./Screens/LoginScreen/LoginScreen";
 
-import { Routes, Route, Switch } from "react-router-dom";
+import { Routes, Route, Switch, useNavigate } from "react-router-dom";
 import HomeRoutes from "./Components/AllRoutes/AllRoutes";
+import { useSelector } from "react-redux";
 
 export const Layout = ({children}) => {
   const [sidebar, setSidebar] = useState(false);
@@ -32,6 +33,15 @@ export const Layout = ({children}) => {
 };
 
 const App = () => {
+
+  const {accessToken, loading } = useSelector((state)=>{return state.auth })
+
+  const navigate = useNavigate();
+  useEffect(()=>{
+      if(!loading && !accessToken){
+          navigate('/auth')
+      }
+  },[accessToken, loading, navigate]);
   return (
    <>
    

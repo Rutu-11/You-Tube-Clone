@@ -5,11 +5,18 @@ import "bootstrap/dist/css/bootstrap.min.css";  //aligns cols evenly on homescre
  import "./_base.scss"
  import { BrowserRouter } from 'react-router-dom'
 import HomeRoutes from './Components/AllRoutes/AllRoutes';
+
+import { Provider } from 'react-redux';
+import store from './Redux/Store';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-        <App />
+    <Provider store ={store} >
+    <App />
+    </Provider>
+       
     </BrowserRouter>
   </React.StrictMode>
 );
