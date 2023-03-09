@@ -6,15 +6,6 @@ import moment from "moment/moment";
 import numeral from "numeral";
 
 const Video = ({video}) => {
-  //states for content related to videos
-  const [views, setViews] = useState(null);
-  const [duration, setDuration] = useState(null);
-
-  //states for content realated to channel
-  const [channelIcon, setChannelIcon] = useState(null);
-
-  const seconds = moment.duration(duration).asSeconds();  // to implement duration stamp on videos
-  const _duration = moment.utc(seconds*1000).format("mm:ss");
 
   // console.log("VV",video.snippet.thumbnails.medium.url)
   const {
@@ -29,21 +20,35 @@ const Video = ({video}) => {
     contentDetails,
  } = video;
 
+  //states for content related to videos
+  const [views, setViews] = useState(null);
+  const [duration, setDuration] = useState(null);
+
+  //states for content realated to channel
+  const [channelIcon, setChannelIcon] = useState(null);
+
+  const seconds = moment.duration(duration).asSeconds();  // to implement duration stamp on videos
+  const _duration = moment.utc(seconds*1000).format("mm:ss");
+
+  
+//  check if id is object and destructure accordingly
+const _videoId = id?.videoId || contentDetails?.videoId || id
+
 //  to get statistical data
   useEffect(()=>{
     const get_video_details = async()=>{
      const{data:{items}} =  await request('/videos',{
       params:{
-        part: "contentDetails, statistics",
-        id:id,
+        part: 'contentDetails,statistics',
+        id:_videoId,
       }
      })
      setDuration(items[0].contentDetails.duration);
-     setViews(items[0].statistics.viewCount);
+     setViews(items[0].statistics.viewCount)
     //  console.log(items)
     }
     get_video_details();
-  },[id])
+  },[_videoId])
 
 
   //to get channel icon
