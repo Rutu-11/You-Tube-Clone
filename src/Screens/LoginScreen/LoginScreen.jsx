@@ -9,7 +9,8 @@ const LoginScreen = () => {
   const accessToken = useSelector((store)=>{
     return store.auth.accessToken
   })
-  console.log(accessToken);
+  // console.log(accessToken);
+
   const handleLogin = ()=>{
     dispatch(login());
   }

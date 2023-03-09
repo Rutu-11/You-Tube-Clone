@@ -11,28 +11,29 @@ import './_HomeScreen.scss'
 const HomeScreen = () => {
 
   const dispatch = useDispatch();
-
   useEffect(()=>{
-    dispatch(getPopularVideos() )
+    dispatch(getPopularVideos())
   },[dispatch])
 
-  const videos = useSelector((store)=>{
+  const { videos, activeCategory, loading } = useSelector(
+    state => state.homeVideos
+ )
+  
 
-    console.log(store);
-    return store
-  })
+  
+
   // console.log("n", videos);
   return (
     <Container>
       <Categoriesbar />
 
       <Row>
-        {/* {videos.map((video) => (
+        {videos.map((video) => (
           <Col lg={3} md={4} >
             <Video key={video.id} video={video} />
           </Col>
-        ))} */}
-        <Video />
+        ))}
+        {/* <Video /> */}
       </Row>
     </Container>
   );
