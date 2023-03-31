@@ -7,6 +7,7 @@ import { getPopularVideos } from "../../Redux/Actions/Videos.Action";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { getVideosByCategory } from "../../Redux/Actions/Videos.Action";
 import './_HomeScreen.scss'
+import Skeleton from 'react-loading-skeleton'
 
 
 const HomeScreen = () => {
@@ -31,7 +32,7 @@ const fetchData=()=>{
  
 }
   
-  // console.log("n", videos);
+  console.log("n", videos);
   return (
     <Container>
       <Categoriesbar />
@@ -45,11 +46,18 @@ const fetchData=()=>{
         }
         className="row"
         >
-        {videos.map((video) => (
+        {!loading ?  videos.map((video) => (
           <Col lg={3} md={4} >
             <Video key={video.id} video={video} />
           </Col>
-        ))}
+        )):
+       [...Array(20)].map(()=>(
+        <Col lg={3} md={4} >
+          <h1>loading</h1>
+            {/* <div height={180} width='100%'  ></div> */}
+          </Col>
+       ))
+      }
         </InfiniteScroll>
        
     </Container>
