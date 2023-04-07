@@ -33,7 +33,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
       },
     });
   } catch (error) {
-    console.log(error.message);
+    console.log('error1',error.message);
     dispatch({
       type: HOME_VIDEOS_FAIL,
       payload: error.message,
@@ -68,7 +68,7 @@ export const getVideosByCategory = (keyword) => async (dispatch, getState) => {
       },
     });
   } catch (error) {
-    console.log(error.message);
+    console.log('error',error.message);
     dispatch({
       type: HOME_VIDEOS_FAIL,
       payload: error.message,

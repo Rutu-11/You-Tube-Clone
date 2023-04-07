@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";  //aligns cols evenly on homescre
  import "./_base.scss"
  import { HashRouter } from 'react-router-dom'
 import HomeRoutes from './Components/AllRoutes/AllRoutes';
-
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Provider } from 'react-redux';
 import store from './Redux/Store';
 

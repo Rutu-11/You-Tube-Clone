@@ -11,10 +11,13 @@
     &__top{
         margin-bottom: 0.5rem;
         position: relative;
+        .lazy-load-image-background {
+            width: 100%;
+         }
         img{
             width: 100%;
         }
-        span{
+        &__duration{
             position: absolute; //to place video duration tag at its right place on the thumbnail
             bottom: 0.3rem;
             right: 0.3rem;
