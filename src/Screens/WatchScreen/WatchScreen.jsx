@@ -37,7 +37,7 @@ function WatchScreen() {
         !loading ?<VideoWatch video={video} videoId={id}/>: <h6>Loading...</h6>
       }
         
-        <Comments />
+        <Comments videoId={id} />
       </Col>
 
       <Col lg={4}>

@@ -29,7 +29,7 @@ export const getChannelDetails = (id)=>async (dispatch)=> {
   }
 
 
-  export const checkSubscription = (id)=>async (dispatch, getState)=> {
+  export const checkSubscription = id=>async (dispatch, getState)=> {
     try{
      const {data} =  await request('/subscriptions',{
           params:{
