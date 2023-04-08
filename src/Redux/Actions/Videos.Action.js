@@ -2,6 +2,9 @@ import {
   HOME_VIDEOS_FAIL,
   HOME_VIDEOS_REQUEST,
   HOME_VIDEOS_SUCCESS,
+  SELECTED_VIDEO_FAILED,
+  SELECTED_VIDEO_REQUEST,
+  SELECTED_VIDEO_SUCCESS,
 } from "../ActionType";
 
 import request from "../../API";
@@ -75,3 +78,30 @@ export const getVideosByCategory = (keyword) => async (dispatch, getState) => {
     });
   }
 };
+
+export const getVideoById = (id)=>async (dispatch)=> {
+  try{
+      dispatch({
+        type:SELECTED_VIDEO_REQUEST
+      })
+
+   const {data} =  await request('/videos',{
+        params:{
+          part : 'snippet, statistics',
+          id:id,
+        }
+      })
+
+      dispatch({
+        type:SELECTED_VIDEO_SUCCESS,
+        payload: data.items[0]
+      })
+  }
+  catch(err){
+      console.log(err.message)
+      dispatch({
+        type: SELECTED_VIDEO_FAILED,
+        payload:err.message
+      })
+  }
+}

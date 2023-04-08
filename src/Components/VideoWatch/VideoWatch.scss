@@ -20,7 +20,10 @@
             color: #fff;
             border-radius: 0;
             text-transform: uppercase;
-            letter-spacing: 0.5ps;
+            letter-spacing: 0.5px;
+            &.btn-gray {
+                background-color: gray;
+             }
             &:hover{
                 color:#fff;
             }
@@ -32,17 +35,17 @@
         }
     }
 
-    &__description{
+    &__description {
         font-size: 0.9rem;
-        white-space:pre-line ;
+        white-space: pre-line;
         border-bottom: 0.2px solid $border-color;
-        .showMoreText{
-            cursor: pointer;
-            text-decoration: none;
-            // display: block;
-            margin: 1rem 0;
-            color: #fff;
-            font-weight: 600;
+        .showMoreText {
+           text-decoration: none;
+           display: block;
+           margin: 1rem 0;
+           color: #fff;
+           font-weight: 500;
+           cursor: pointer;
         }
-    }
-}
+     }
+  }
