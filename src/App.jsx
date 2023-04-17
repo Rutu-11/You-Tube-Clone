@@ -33,14 +33,14 @@ export const Layout = ({children}) => {
 
 const App = () => {
 
-  const {accessToken, loading } = useSelector((state)=>{return state.auth })
+  // const {accessToken, loading } = useSelector((state)=>{return state.auth })
 
-  const navigate = useNavigate();
-  useEffect(()=>{
-      if(!loading && !accessToken){
-          navigate('/auth')
-      }
-  },[accessToken, loading, navigate]);
+  // const navigate = useNavigate();
+  // useEffect(()=>{
+  //     if(!loading && !accessToken){
+  //         navigate('/auth')
+  //     }
+  // },[accessToken, loading, navigate]);
   return (
    <>
    
