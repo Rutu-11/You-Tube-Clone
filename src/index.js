@@ -12,13 +12,17 @@ import store from './Redux/Store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
     <Provider store ={store} >
     <App />
     </Provider>
        
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
 
+// "homepage": "https://rutu-11.github.io/You-Tube-Clone",
+
+// "predeploy": "npm run build",
+// "deploy": "gh-pages -d build",
