@@ -7,7 +7,7 @@ import VideoWatchSidebar from "../../Components/VideoWatchSideBar/VideoWatchSide
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 function SearchScreen() {
   const { query } = useParams();
-  console.log(query);
+  // console.log(query);
 
   const dispatch = useDispatch();
   useEffect(() => {
