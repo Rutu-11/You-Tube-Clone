@@ -21,7 +21,7 @@ import {Routes, Route,useNavigate} from "react-router-dom";
 
 export const Layout = ({children}) => {
   const [sidebar, setSidebar] = useState(false);
-
+  console.log(process.env)
   const handleSidebar = () => {
     return setSidebar(!sidebar);
   };
