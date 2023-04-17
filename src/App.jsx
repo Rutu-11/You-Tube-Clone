@@ -48,9 +48,9 @@ const App = () => {
 
   const navigate = useNavigate();
   useEffect(()=>{
-      // if(!loading && !accessToken){
-      //     navigate('/auth')
-      // }
+      if(!loading && !accessToken){
+          navigate('/auth')
+      }
   },[accessToken, loading, navigate]);
   return (
    <>

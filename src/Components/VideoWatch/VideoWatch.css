@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@300,400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #16181b;
+  background-attachment: fixed;
+  color: #b1bdb4;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.videoMetaData__top span {
+  cursor: pointer;
+}
+.videoMetaData__channel {
+  border-top: 0.2px solid #4c4c4c;
+  border-bottom: 0.2px solid #4c4c4c;
+}
+.videoMetaData__channel img {
+  width: 50px;
+  height: 50px;
+}
+.videoMetaData__channel button {
+  background-color: red;
+  color: #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.videoMetaData__channel button.btn-gray {
+  background-color: gray;
+}
+.videoMetaData__channel button:hover {
+  color: #fff;
+}
+.videoMetaData__channel button:focus {
+  border: none;
+  outline: none;
+}
+.videoMetaData__description {
+  font-size: 0.9rem;
+  white-space: pre-line;
+  border-bottom: 0.2px solid #4c4c4c;
+}
+.videoMetaData__description .showMoreText {
+  text-decoration: none;
+  display: block;
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}/*# sourceMappingURL=VideoWatch.css.map */

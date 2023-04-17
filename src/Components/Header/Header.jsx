@@ -18,6 +18,8 @@ const Header = ({handleSidebar}) => {
       navigate(`/search/${input}`)
 
   }
+  const loggedInUser = JSON.parse(sessionStorage.getItem('U-tube-user'));
+  // console.log('loggedInUser',loggedInUser)
   return (
     <div className='border border-dark header' >
       <FaBars 
@@ -25,13 +27,15 @@ const Header = ({handleSidebar}) => {
       onClick={()=>handleSidebar()}
 
       />
+      <div className='header__div'>
       <img
-      src="https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_1280.png"
+      src="http://pngimg.com/uploads/youtube/youtube_PNG2.png"
       
       className='header__logo'
       alt="Y-Logo"
-      />
-
+      /> 
+      <span className='header__youTube'>YouTube</span>
+      </div>
       <form action="" onSubmit={handleSubmit} >
         <input type="text" placeholder='Search' value={input} onChange={(e)=>setInput(e.target.value)} />
         <button type='submit'>
@@ -44,7 +48,8 @@ const Header = ({handleSidebar}) => {
 
         
         <MdApps  size={28}/>
-        <img src="https://www.shutterstock.com/image-vector/business-man-icon-600w-249914287.jpg" alt="avatar" />
+        {/* <img src="https://www.shutterstock.com/image-vector/business-man-icon-600w-249914287.jpg" alt="avatar" /> */}
+        <img  src={loggedInUser ? loggedInUser.photo : "https://www.shutterstock.com/image-vector/business-man-icon-600w-249914287.jpg"} alt="avatar" />
       </div>
     </div>
   )

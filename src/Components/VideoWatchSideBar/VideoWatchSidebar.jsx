@@ -119,7 +119,7 @@ function VideoWatchSidebar({ video, searchScreen, subScreen }) {
           <p className='mt-1 videoHorizontal__desc'>{description}</p>
        )}
 
-       <div className='my-1 videoHorizontal__channel d-flex align-items-center'>
+       <div className={`my-1 ${`videoHorizontal__thumbnail ${thumbnail} `} d-flex align-items-center`}>
           {isVideo && (
              <LazyLoadImage src={channelIcon?.url} effect='blur' />
           )}

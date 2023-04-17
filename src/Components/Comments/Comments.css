@@ -1,0 +1,24 @@
+.comments__form img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.comments__form input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #353946;
+  color: #fff;
+}
+.comments__form input:focus {
+  outline: none;
+}
+.comments__form button {
+  background-color: #353946;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.comments__form button:focus {
+  border: none;
+  outline: none;
+}/*# sourceMappingURL=Comments.css.map */

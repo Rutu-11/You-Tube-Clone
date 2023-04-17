@@ -47,15 +47,12 @@ const HomeScreen = () => {
       >
         {!loading
           ? videos.map((video) => (
-              <Col lg={3} md={4}>
+              <Col lg={3} md={4}  >
                 <Video key={video.id} video={video} />
               </Col>
             ))
           : [...Array(20)].map(() => (
-              // <Col lg={3} md={4} >
-              //   {/* <h1>loading</h1> */}
-              //     <div style={{height:"170px", width:"90%", backgroundColor:"#4c4c4c", margin:"10px"  }} ></div>
-              //   </Col>
+             
               <Col lg={3} md={4}>
                 <SkeletonVideo/>
               </Col>

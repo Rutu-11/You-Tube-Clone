@@ -15,10 +15,12 @@ import {
 
 
 import { log_out } from "../../Redux/Actions/Auth.Action";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ sidebar, handleSidebar }) => {
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
   const logOutHandler = () => {
     dispatch(log_out());
   };
@@ -28,7 +30,7 @@ const Sidebar = ({ sidebar, handleSidebar }) => {
       className={sidebar ? "sidebar open" : "sidebar close"}
       onClick={() => handleSidebar(false)}
     >
-      <li>
+      <li onClick={()=>{navigate('/') }} >
         <MdHome size={23} />
         <span>Home</span>
       </li>

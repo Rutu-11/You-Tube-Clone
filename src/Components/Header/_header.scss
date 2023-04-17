@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem; // made changes from 1rem to 1.5 rem
+    padding: 1.5rem 3rem; // made changes from 1rem to 1.5 rem
 
     background-color: $black-primary;
 
@@ -17,23 +17,32 @@
     &__menu{
         display: none;
     }
+    &__div{
+        display: flex;
+    }
     &__logo{
         width: 30px;
         height: 30px;
+        margin-right: 10px;
         object-fit: contain;
         display: block;
+    }
+    &__youTube{
+        font-weight: 700;
+        font-size: larger;
     }
     form{
         flex: 0.6;
         display: flex;
         padding: 0.1rem;
         margin: 0 1rem;
-        border-radius: 3px;
+        border-radius: 20px;
         border: 1.2px solid;
         background-color: $black-secondary;
 
         input{
             width: 100%;
+           
             border:none;
             font-weight: 500;
             background: transparent;
@@ -48,8 +57,10 @@
         button{
             padding: 0 1.25rem;
             color: $text-color;
-            background-color: transparent;
+            background-color: #222222;
             border:none;
+            border-bottom-right-radius:20px;
+            border-top-right-radius: 20px;
 
             &:focus{
                 border:none;

@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@300,400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #16181b;
+  background-attachment: fixed;
+  color: #b1bdb4;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.watchScreen__player {
+  height: 60vh;
+  background-color: #353946;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 520px) {
+  .watchScreen__player {
+    height: 35vh;
+  }
+}/*# sourceMappingURL=WatchScreen.css.map */
