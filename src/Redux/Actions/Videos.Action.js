@@ -30,7 +30,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
         pageToken: getState().homeVideos.nextPageToken,
       },
     });
-    console.log("data", data);
+    // console.log("data", data);
     dispatch({
       type: HOME_VIDEOS_SUCCESS,
       payload: {
@@ -63,7 +63,7 @@ export const getVideosByCategory = (keyword) => async (dispatch, getState) => {
         type: "video",
       },
     });
-    console.log("data", data);
+    // console.log("data", data);
     dispatch({
       type: HOME_VIDEOS_SUCCESS,
       payload: {
@@ -150,7 +150,7 @@ export const getVideosBySearch = (keyword) => async (dispatch) => {
         type: "video, channel",
       },
     });
-    console.log("data", data);
+    // console.log("data", data);
     dispatch({
       type: SEARCH_VIDEO_SUCCESS,
       payload: data.items

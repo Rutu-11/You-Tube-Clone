@@ -46,7 +46,7 @@ export const getChannelDetails = (id)=>async (dispatch)=> {
           type:GET_SUBSCRIPTION_STATUS,
           payload: data.items.length !== 0,
         })
-        console.log("subscription", data)
+        // console.log("subscription", data)
     }
     catch(err){
         console.log("subscription",err.response.data)

@@ -71,8 +71,6 @@ function VideoWatchSidebar({ video, searchScreen, subScreen }) {
     get_channel_icon();
   }, [channelId]);
 
-  const _channelId = resourceId?.channelId || channelId;
-
   const navigate = useNavigate();
   const handleClick = () => {
     //! HandleChannelClick Remain

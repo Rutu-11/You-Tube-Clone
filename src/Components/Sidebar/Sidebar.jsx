@@ -4,13 +4,10 @@ import { useDispatch } from "react-redux";
 
 import {
   MdSubscriptions,
-  MdExitToApp,
   MdThumbUp,
   MdHistory,
   MdLibraryBooks,
   MdHome,
-  MdSentimentSatisfied,
-  MdSentimentDissatisfied,
   MdLogout,
   MdLogin
 } from "react-icons/md";
@@ -59,10 +56,6 @@ const Sidebar = ({ sidebar, handleSidebar }) => {
         <span>Library</span>
       </li>
 
-      {/* <li>
-          <MdSentimentSatisfied size={23} />
-          <span>Home</span>
-        </li> */}
 
      
 

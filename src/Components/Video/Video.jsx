@@ -96,7 +96,7 @@ const _videoId = id?.videoId || contentDetails?.videoId || id
           src= {channelIcon ?.url}
           alt=""
         /> */}
-        <LazyLoadImage src= {channelIcon ?.url} alt="" effect="blur" />
+        <LazyLoadImage src= {channelIcon?.url} alt="" effect="blur" />
         <p>{channelTitle} </p>
       </div>
     </div>

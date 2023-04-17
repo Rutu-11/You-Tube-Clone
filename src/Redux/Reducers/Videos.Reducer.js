@@ -12,12 +12,6 @@ import {
   SELECTED_VIDEO_SUCCESS,
 } from "../ActionType";
 
-const initialState = {
-  videos: [],
-  loading: false,
-  nextPageToken: null,
-  activeCategory: "All",
-};
 export const homeVideoReducer = (
   state = {
     videos: [],
@@ -32,7 +26,7 @@ export const homeVideoReducer = (
       return {
         ...state,
         videos:
-          state.activeCategory == payload.category
+          state.activeCategory === payload.category
             ? [...state.videos, ...payload.videos]
             : payload.videos, //for pagination
         loading: false,

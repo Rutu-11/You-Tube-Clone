@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Categoriesbar from "../../Components/Categoriesbar/Categoriesbar";
 import Video from "../../Components/Video/Video";
 import { getPopularVideos } from "../../Redux/Actions/Videos.Action";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { getVideosByCategory } from "../../Redux/Actions/Videos.Action";
-// import SkeletonVideo from "../../components/skeletons/SkeletonVideo";
 import "./_HomeScreen.scss";
-import Skeleton from "react-loading-skeleton";
 import SkeletonVideo from "../../Components/Skeleton/SkeletonVideo";
 
 const HomeScreen = () => {
@@ -31,7 +29,7 @@ const HomeScreen = () => {
     // }
   };
 
-  console.log("n", videos);
+  // console.log("n", videos);
   return (
     <Container>
       <Categoriesbar />

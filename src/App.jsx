@@ -1,23 +1,12 @@
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import { Container } from "react-bootstrap";
-import HomeScreen from "./Screens/HomeScreen/HomeScreen";
 import "./_app.scss";
 import { useEffect, useState } from "react";
-import LoginScreen from "./Screens/LoginScreen/LoginScreen";
-
-// import { Routes, Route, Switch, useNavigate } from "react-router-dom";
-import HomeRoutes from "./Components/AllRoutes/AllRoutes";
 import { useSelector } from "react-redux";
-import WatchScreen from "./Screens/WatchScreen/WatchScreen";
+import HomeRoutes from "./Components/AllRoutes/AllRoutes";
+import {useNavigate} from "react-router-dom";
 
-
-import {Routes, Route,useNavigate} from "react-router-dom";
-// import { Layout } from '../../App';
-// import HomeScreen from '../../Screens/HomeScreen/HomeScreen';
-// import LoginScreen from '../../Screens/LoginScreen/LoginScreen';
-
-// import WatchScreen from './Screens/WatchScreen/WatchScreen';
 
 export const Layout = ({children}) => {
   const [sidebar, setSidebar] = useState(false);
@@ -54,10 +43,6 @@ const App = () => {
   },[accessToken, loading, navigate]);
   return (
    <>
-    {/* <Routes>
-    <Route path="/" element={<HomeScreen/>} />
-    <Route path="/watch/:id" element={<WatchScreen/> }  />
-   </Routes>  */}
    
      <HomeRoutes/>
     </>
