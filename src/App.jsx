@@ -22,9 +22,9 @@ export const Layout = ({children}) => {
         <Sidebar sidebar={sidebar} handleSidebar={handleSidebar} />
 
         <Container fluid className="app_main">
-          {/* <HomeScreen /> */}
+        
           {children}
-          {/* <WatchScreen/> */}
+        
         </Container>
       </div>
     </>
