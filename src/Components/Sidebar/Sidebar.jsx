@@ -11,6 +11,8 @@ import {
   MdHome,
   MdSentimentSatisfied,
   MdSentimentDissatisfied,
+  MdLogout,
+  MdLogin
 } from "react-icons/md";
 
 
@@ -62,17 +64,18 @@ const Sidebar = ({ sidebar, handleSidebar }) => {
           <span>Home</span>
         </li> */}
 
-      <li>
-        <MdSentimentDissatisfied size={23} />
-        <span>I Don't Know</span>
-      </li>
+     
 
       <hr />
-      <li onClick={logOutHandler}>
-        <MdExitToApp size={23} />
-        <span>Log Out</span>
+      <li onClick={()=>{navigate('/auth') }} >
+        <MdLogin size={23} />
+        <span>Login</span>
       </li>
 
+      <li  onClick={logOutHandler}>
+        <MdLogout size={23} />
+        <span>Logout</span>
+      </li>
       <hr />
       {/* <li>
           <MdHome size={23} />
